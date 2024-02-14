@@ -1,6 +1,8 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 
+NB_FICHIERS = 5
+
 def create_pdf(index):
     file_name = f"results_{index}.csv"
     df = pd.read_csv(file_name)
@@ -19,7 +21,7 @@ def create_pdf(index):
 
 
 def create_pdfs():
-    for i in range(1, 11):
+    for i in range(1, NB_FICHIERS + 1):
         create_pdf(i)
 
 create_pdfs()

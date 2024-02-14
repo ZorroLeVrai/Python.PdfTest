@@ -2,6 +2,8 @@ import pandas as pd
 import numpy as np
 import random
 
+NB_FICHIERS = 5
+
 def create_function():
     nb_terms = random.randint(2, 6)
     def myfunction(x):
@@ -26,7 +28,7 @@ def create_csv(index):
     df.to_csv(f"results_{index}.csv", index=False)
 
 def create_csvs():
-    for i in range(1, 11):
+    for i in range(1, NB_FICHIERS+1):
         create_csv(i)
 
 create_csvs()
